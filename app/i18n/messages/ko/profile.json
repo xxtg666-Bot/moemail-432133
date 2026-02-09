@@ -5,10 +5,10 @@
     "name": "이름",
     "role": "역할",
     "roles": {
-      "EMPEROR": "황제",
-      "DUKE": "공작",
-      "KNIGHT": "기사",
-      "CIVILIAN": "평민"
+      "EMPEROR": "Owner",
+      "DUKE": "Admin",
+      "KNIGHT": "Member",
+      "CIVILIAN": "Guest"
     }
   },
   "apiKey": {
@@ -59,7 +59,7 @@
     "configRoleLabel": "설정 가능한 역할 권한",
     "enable": "이메일 서비스 활성화",
     "fixedRoleLimits": "고정 역할 제한",
-    "emperorLimit": "황제는 제한 없이 무제한 이메일을 보낼 수 있습니다",
+    "emperorLimit": "Owner는 제한 없이 무제한 이메일을 보낼 수 있습니다",
     "civilianLimit": "이메일을 보낼 수 없습니다",
     "enableDescription": "활성화되면 Resend를 사용하여 이메일을 보냅니다",
     "apiKey": "Resend API Key",
@@ -100,7 +100,7 @@
   },
   "website": {
     "title": "웹사이트 설정",
-    "description": "웹사이트 설정 구성 (황제 전용)",
+    "description": "웹사이트 설정 구성 (Owner 전용)",
     "defaultRole": "새 사용자의 기본 역할",
     "emailDomains": "이메일 도메인",
     "emailDomainsPlaceholder": "쉼표로 여러 도메인 구분",
@@ -123,7 +123,7 @@
   },
   "promote": {
     "title": "역할 관리",
-    "description": "사용자 역할 관리 (황제 전용)",
+    "description": "사용자 역할 관리 (Owner 전용)",
     "search": "사용자 검색",
     "searchPlaceholder": "사용자 이름 또는 이메일 입력",
     "username": "사용자 이름",

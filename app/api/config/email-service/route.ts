@@ -10,8 +10,8 @@ interface EmailServiceConfig {
   enabled: boolean
   apiKey: string
   roleLimits: {
-    duke?: number
-    knight?: number
+    admin?: number
+    member?: number
   }
 }
 
@@ -35,8 +35,8 @@ export async function GET() {
     const customLimits = roleLimits ? JSON.parse(roleLimits) : {}
     
     const finalLimits = {
-      duke: customLimits.duke !== undefined ? customLimits.duke : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.duke,
-      knight: customLimits.knight !== undefined ? customLimits.knight : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.knight,
+      admin: customLimits.admin !== undefined ? customLimits.admin : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.admin,
+      member: customLimits.member !== undefined ? customLimits.member : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.member,
     }
 
     return NextResponse.json({
@@ -74,12 +74,12 @@ export async function POST(request: Request) {
 
     const env = getRequestContext().env
     
-    const customLimits: { duke?: number; knight?: number } = {}
-    if (config.roleLimits?.duke !== undefined) {
-      customLimits.duke = config.roleLimits.duke
+    const customLimits: { admin?: number; member?: number } = {}
+    if (config.roleLimits?.admin !== undefined) {
+      customLimits.admin = config.roleLimits.admin
     }
-    if (config.roleLimits?.knight !== undefined) {
-      customLimits.knight = config.roleLimits.knight
+    if (config.roleLimits?.member !== undefined) {
+      customLimits.member = config.roleLimits.member
     }
 
     await Promise.all([

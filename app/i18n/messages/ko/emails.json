@@ -4,7 +4,7 @@
     "description": "이 페이지에 접근할 권한이 없습니다. 웹사이트 관리자에게 문의하세요.",
     "adminContact": "관리자 연락처",
     "backToHome": "홈으로 돌아가기",
-    "needPermission": "API Key를 관리하려면 공작 이상의 권한이 필요합니다",
+    "needPermission": "API Key를 관리하려면 Admin 이상의 권한이 필요합니다",
     "contactAdmin": "역할 업그레이드를 위해 웹사이트 관리자에게 문의하세요"
   },
   "layout": {
@@ -159,11 +159,11 @@
     "permanent": "영구",
     "createOwnEmail": "나만의 임시 이메일 만들기",
     "brand": {
-      "title": "MoeMail",
-      "subtitle": "귀여운 임시 이메일 서비스",
+      "title": "432133 Mail",
+      "subtitle": "임시 이메일 서비스",
       "cta": "지금 사용해보기",
       "officialSite": "공식 사이트",
-      "copyright": "© 2024 MoeMail. 귀여운 임시 이메일 서비스"
+      "copyright": "© 2024 432133 Mail"
     }
   }
 }

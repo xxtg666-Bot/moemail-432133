@@ -15,10 +15,10 @@ import { getUserId } from "./apiKey"
 import { verifyTurnstileToken } from "./turnstile"
 
 const ROLE_DESCRIPTIONS: Record<Role, string> = {
-  [ROLES.EMPEROR]: "皇帝（网站所有者）",
-  [ROLES.DUKE]: "公爵（超级用户）",
-  [ROLES.KNIGHT]: "骑士（高级用户）",
-  [ROLES.CIVILIAN]: "平民（普通用户）",
+  [ROLES.EMPEROR]: "Owner",
+  [ROLES.DUKE]: "Admin",
+  [ROLES.KNIGHT]: "Member",
+  [ROLES.CIVILIAN]: "Guest",
 }
 
 const getDefaultRole = async (): Promise<Role> => {

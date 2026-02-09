@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
-import { Gem, Sword, User2, Loader2 } from "lucide-react"
+import { ShieldCheck, Users, User2, Loader2 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { useToast } from "@/components/ui/use-toast"
@@ -16,8 +16,8 @@ import {
 } from "@/components/ui/select"
 
 const roleIcons = {
-  [ROLES.DUKE]: Gem,
-  [ROLES.KNIGHT]: Sword,
+  [ROLES.DUKE]: ShieldCheck,
+  [ROLES.KNIGHT]: Users,
   [ROLES.CIVILIAN]: User2,
 } as const
 
@@ -132,13 +132,13 @@ export function PromotePanel() {
             <SelectContent>
               <SelectItem value={ROLES.DUKE}>
                 <div className="flex items-center gap-2">
-                  <Gem className="w-4 h-4" />
+                  <ShieldCheck className="w-4 h-4" />
                   {roleNames[ROLES.DUKE]}
                 </div>
               </SelectItem>
               <SelectItem value={ROLES.KNIGHT}>
                 <div className="flex items-center gap-2">
-                  <Sword className="w-4 h-4" />
+                  <Users className="w-4 h-4" />
                   {roleNames[ROLES.KNIGHT]}
                 </div>
               </SelectItem>

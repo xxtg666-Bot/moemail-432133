@@ -14,8 +14,8 @@ interface EmailServiceConfig {
   enabled: boolean
   apiKey: string
   roleLimits: {
-    duke: number
-    knight: number
+    admin: number
+    member: number
   }
 }
 
@@ -27,8 +27,8 @@ export function EmailServiceConfig() {
     enabled: false,
     apiKey: "",
     roleLimits: {
-      duke: -1,
-      knight: -1,
+      admin: -1,
+      member: -1,
     }
   })
   const [loading, setLoading] = useState(false)
@@ -169,8 +169,8 @@ export function EmailServiceConfig() {
                     <p className="text-sm font-medium text-gray-900">{t("configRoleLabel")}</p>
                   </div>
                   {[
-                    { value: "duke", label: tCard("roles.DUKE"), key: "duke" as const },
-                    { value: "knight", label: tCard("roles.KNIGHT"), key: "knight" as const }
+                    { value: "admin", label: tCard("roles.DUKE"), key: "admin" as const },
+                    { value: "member", label: tCard("roles.KNIGHT"), key: "member" as const }
                   ].map((role) => {
                     const isDisabled = config.roleLimits[role.key] === -1
                     const isEnabled = !isDisabled
@@ -207,7 +207,7 @@ export function EmailServiceConfig() {
                                 className="text-base font-semibold cursor-pointer select-none flex items-center gap-2"
                               >
                                 <span className="text-2xl">
-                                  {role.value === 'duke' ? '🏰' : '⚔️'}
+                                  {role.value === 'admin' ? '🛠️' : '👥'}
                                 </span>
                                 {role.label}
                               </Label>

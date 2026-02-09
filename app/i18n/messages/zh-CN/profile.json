@@ -5,10 +5,10 @@
     "name": "用户名",
     "role": "角色",
     "roles": {
-      "EMPEROR": "皇帝",
-      "DUKE": "公爵",
-      "KNIGHT": "骑士",
-      "CIVILIAN": "平民"
+      "EMPEROR": "Owner",
+      "DUKE": "Admin",
+      "KNIGHT": "Member",
+      "CIVILIAN": "Guest"
     }
   },
   "apiKey": {
@@ -59,7 +59,7 @@
     "configRoleLabel": "可配置的角色权限",
     "enable": "启用邮件服务",
     "fixedRoleLimits": "固定权限规则",
-    "emperorLimit": "皇帝可以无限发件，不受任何限制",
+    "emperorLimit": "Owner 可以无限发件，不受任何限制",
     "civilianLimit": "永远不能发件",
     "enableDescription": "开启后将使用 Resend 发送邮件",
     "apiKey": "Resend API Key",
@@ -100,7 +100,7 @@
   },
   "website": {
     "title": "网站配置",
-    "description": "配置网站设置（仅皇帝可用）",
+    "description": "配置网站设置（仅 Owner 可用）",
     "defaultRole": "新用户默认角色",
     "emailDomains": "邮箱域名",
     "emailDomainsPlaceholder": "多个域名用逗号分隔",
@@ -123,7 +123,7 @@
   },
   "promote": {
     "title": "角色管理",
-    "description": "管理用户角色（仅皇帝可用）",
+    "description": "管理用户角色（仅 Owner 可用）",
     "search": "搜索用户",
     "searchPlaceholder": "输入用户名或邮箱",
     "username": "用户名",

@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
     if (currentUserRole?.role.name === ROLES.EMPEROR) {
       return Response.json(
-        { error: "不能降级皇帝" },
+        { error: "Cannot demote Owner" },
         { status: 400 }
       );
     }
@@ -48,9 +48,9 @@ export async function POST(request: Request) {
 
     if (!targetRole) {
       const description = {
-        [ROLES.DUKE]: "超级用户",
-        [ROLES.KNIGHT]: "高级用户",
-        [ROLES.CIVILIAN]: "普通用户",
+        [ROLES.DUKE]: "Admin",
+        [ROLES.KNIGHT]: "Member",
+        [ROLES.CIVILIAN]: "Guest",
       }[roleName];
 
       const [newRole] = await db.insert(roles)

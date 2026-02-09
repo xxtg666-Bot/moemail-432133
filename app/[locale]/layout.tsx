@@ -7,7 +7,6 @@ import { FloatMenu } from "@/components/float-menu"
 import { ThemeProvider } from "@/components/theme/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from "@/lib/utils"
-import { zpix } from "../fonts"
 import "../globals.css"
 import { Providers } from "../providers"
 
@@ -74,7 +73,7 @@ export async function generateMetadata({
       url: `${baseUrl}/${locale}`,
       title: t("title"),
       description: t("description"),
-      siteName: "MoeMail",
+      siteName: "432133 Mail",
     },
     twitter: {
       card: "summary_large_image",
@@ -110,17 +109,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="application-name" content="MoeMail" />
+        <meta name="application-name" content="432133 Mail" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="MoeMail" />
+        <meta name="apple-mobile-web-app-title" content="432133 Mail" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body 
         className={cn(
-          zpix.variable,
-          "font-zpix min-h-screen antialiased",
+          "min-h-screen antialiased",
           "bg-background text-foreground",
           "transition-colors duration-300"
         )}

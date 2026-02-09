@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { signOut } from "next-auth/react"
-import { Github, Settings, Crown, Sword, User2, Gem, Mail } from "lucide-react"
+import { Github, Settings, Shield, ShieldCheck, User2, Users, Mail } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { WebhookConfig } from "./webhook-config"
 import { PromotePanel } from "./promote-panel"
@@ -20,10 +20,10 @@ interface ProfileCardProps {
 }
 
 const roleConfigs = {
-  emperor: { key: 'EMPEROR', icon: Crown },
-  duke: { key: 'DUKE', icon: Gem },
-  knight: { key: 'KNIGHT', icon: Sword },
-  civilian: { key: 'CIVILIAN', icon: User2 },
+  owner: { key: 'EMPEROR', icon: Shield },
+  admin: { key: 'DUKE', icon: ShieldCheck },
+  member: { key: 'KNIGHT', icon: Users },
+  guest: { key: 'CIVILIAN', icon: User2 },
 } as const
 
 const providerConfigs = {

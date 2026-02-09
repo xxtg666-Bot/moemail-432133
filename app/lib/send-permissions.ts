@@ -97,20 +97,20 @@ async function getUserDailyLimit(userId: string): Promise<number> {
     const customLimits = roleLimitsStr ? JSON.parse(roleLimitsStr) : {}
     
     const finalLimits = {
-      emperor: EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.emperor,
-      duke: customLimits.duke !== undefined ? customLimits.duke : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.duke,
-      knight: customLimits.knight !== undefined ? customLimits.knight : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.knight,
-      civilian: EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.civilian,
+      owner: EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.owner,
+      admin: customLimits.admin !== undefined ? customLimits.admin : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.admin,
+      member: customLimits.member !== undefined ? customLimits.member : EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.member,
+      guest: EMAIL_CONFIG.DEFAULT_DAILY_SEND_LIMITS.guest,
     }
 
-    if (userRoleNames.includes("emperor")) {
-      return finalLimits.emperor
-    } else if (userRoleNames.includes("duke")) {
-      return finalLimits.duke
-    } else if (userRoleNames.includes("knight")) {
-      return finalLimits.knight
-    } else if (userRoleNames.includes("civilian")) {
-      return finalLimits.civilian
+    if (userRoleNames.includes("owner")) {
+      return finalLimits.owner
+    } else if (userRoleNames.includes("admin")) {
+      return finalLimits.admin
+    } else if (userRoleNames.includes("member")) {
+      return finalLimits.member
+    } else if (userRoleNames.includes("guest")) {
+      return finalLimits.guest
     }
 
     return -1

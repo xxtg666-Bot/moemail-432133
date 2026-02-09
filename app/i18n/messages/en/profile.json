@@ -5,10 +5,10 @@
     "name": "Name",
     "role": "Role",
     "roles": {
-      "EMPEROR": "Emperor",
-      "DUKE": "Duke",
-      "KNIGHT": "Knight",
-      "CIVILIAN": "Civilian"
+      "EMPEROR": "Owner",
+      "DUKE": "Admin",
+      "KNIGHT": "Member",
+      "CIVILIAN": "Guest"
     }
   },
   "apiKey": {
@@ -59,7 +59,7 @@
     "configRoleLabel": "Configurable Role Permissions",
     "enable": "Enable Email Service",
     "fixedRoleLimits": "Fixed Role Limits",
-    "emperorLimit": "Emperor can send unlimited emails without any restrictions",
+    "emperorLimit": "Owner can send unlimited emails without any restrictions",
     "civilianLimit": "Cannot send emails",
     "enableDescription": "When enabled, emails will be sent using Resend",
     "apiKey": "Resend API Key",
@@ -100,7 +100,7 @@
   },
   "website": {
     "title": "Website Configuration",
-    "description": "Configure website settings (Emperor only)",
+    "description": "Configure website settings (Owner only)",
     "defaultRole": "Default Role for New Users",
     "emailDomains": "Email Domains",
     "emailDomainsPlaceholder": "Separate multiple domains with commas",
@@ -123,7 +123,7 @@
   },
   "promote": {
     "title": "Role Management",
-    "description": "Manage user roles (Emperor only)",
+    "description": "Manage user roles (Owner only)",
     "search": "Search Users",
     "searchPlaceholder": "Enter username or email",
     "username": "Username",

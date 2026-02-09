@@ -1,8 +1,8 @@
 export const ROLES = {
-  EMPEROR: 'emperor',
-  DUKE: 'duke',
-  KNIGHT: 'knight',
-  CIVILIAN: 'civilian',
+  EMPEROR: 'owner',
+  DUKE: 'admin',
+  KNIGHT: 'member',
+  CIVILIAN: 'guest',
 } as const;
 
 export type Role = typeof ROLES[keyof typeof ROLES];

@@ -22,7 +22,7 @@ export async function GET() {
   });
 
   if (emperorRole && emperorRole.userRoles.length > 0) {
-    return Response.json({ error: "已存在皇帝, 谋反将被处死" }, { status: 400 });
+    return Response.json({ error: "Owner already exists" }, { status: 400 });
   }
 
   try {
@@ -34,7 +34,7 @@ export async function GET() {
     });
 
     if (currentUserRole?.role.name === ROLES.EMPEROR) {
-      return Response.json({ message: "你已经是皇帝了" });
+      return Response.json({ message: "You are already the Owner" });
     }
 
     let roleId = emperorRole?.id;
@@ -42,7 +42,7 @@ export async function GET() {
       const [newRole] = await db.insert(roles)
         .values({
           name: ROLES.EMPEROR,
-          description: "皇帝（网站所有者）",
+          description: "Owner",
         })
         .returning({ id: roles.id });
       roleId = newRole.id;
@@ -50,11 +50,11 @@ export async function GET() {
 
     await assignRoleToUser(db, session.user.id, roleId);
 
-    return Response.json({ message: "登基成功，你已成为皇帝" });
+    return Response.json({ message: "You are now the Owner" });
   } catch (error) {
-    console.error("Failed to initialize emperor:", error);
+    console.error("Failed to initialize owner:", error);
     return Response.json(
-      { error: "登基称帝失败" },
+      { error: "Failed to initialize Owner" },
       { status: 500 }
     );
   }
